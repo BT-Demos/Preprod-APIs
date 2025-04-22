@@ -28,9 +28,9 @@ jobs:
       - name: register-build-artifacts
         uses: https://github.com/cloudbees-io/register-build-artifact@v1
         with:
-          name: App11-APIs
+          name: App12-APIs
           version: 1.0.0
-          url: docker.io/App11/App11-APIs:1.0.0
+          url: docker.io/App12/App12-APIs:1.0.0
 
   deploy:
     needs: [build]
@@ -40,7 +40,7 @@ jobs:
         kind: deploy
         uses: cloudbees-io/register-deployed-artifact@v1
         with:
-          name: App11-APIs
+          name: App12-APIs
           version: 1.0.0
-          url: docker.io/App11/App11-APIs:1.0.0
+          url: docker.io/App12/App12-APIs:1.0.0
           target-environment: "qa"
